@@ -1,13 +1,12 @@
 import Link from "next/link";
 
-export default function About() {
+export default function About(){
     return (
         <div>
             <h1>О нас</h1>
-            <p>Мы - прекрасная компания</p>
             <Link href={'/'}>
-                На главную
+                на главную
             </Link>
         </div>
-    );
+    )
 }

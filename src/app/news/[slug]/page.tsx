@@ -42,16 +42,20 @@ export default async function Page({params}: { params: Promise<{ slug: string }>
     }
 
     return (
-        <div className="min-h-screen flex flex-col items-center justify-center">
-            <h1 className="text-3xl font-bold">{newsItem.text}</h1>
-            <p className="text-lg text-gray-600">{TimeConverter(newsItem.date)}</p>
-            <p className="mt-4">ID поста: {newsItem.id}</p>
-            {newsItem.attachments.map((item: Attachment, index: number) => (
-                item.image &&
-                <div key={index}>
-                    <Image src={item.image?.src} width={item.image?.width} height={item.image?.height} alt={''}/>
-                </div>
-            ))}
+        <div className="flex flex-row mx-10">
+            <div className='flex flex-col w-1/2 m-10 p-2'>
+                <h1 className="font-bold text-xl">{newsItem.text}</h1>
+                <p className="text-lg text-gray-600">{TimeConverter(newsItem.date)}</p>
+                <p className="mt-4">ID поста: {newsItem.id}</p>
+            </div>
+            <div className="flex flex-col w-1/2 mt-15">
+                {newsItem.attachments.map((item: Attachment, index: number) => (
+                    item.image &&
+                    <div key={index}>
+                        <Image src={item.image?.src} width={item.image?.width} height={item.image?.height} alt={''}/>
+                    </div>
+                ))}
+            </div>
         </div>
     );
 }

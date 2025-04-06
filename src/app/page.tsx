@@ -32,8 +32,8 @@ export default function Home() {
             {data.map((item: Post) => (
                 <div className={'my-2 bg-blue-100 rounded-2xl p-5'} key={item.id}>
                     <Link href={`/news/${item.id}`}>
-                        <h3>{item.text}</h3>
-                        <p>{TimeConverter(item.date)}</p>
+                        <h3 className='font-bold'>{item.text}</h3>
+                        <p className='text-gray-500'>{TimeConverter(item.date)}</p>
                     </Link>
                 </div>
             ))}

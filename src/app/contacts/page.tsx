@@ -5,7 +5,7 @@ export default function Contacts() {
         <div>
             <h1>Контакты</h1>
             <p>Это страница с контактами.</p>
-            <Link href={'/'}>
+            <Link href={'/public'}>
                 На главную
             </Link>
         </div>

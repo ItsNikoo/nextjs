@@ -8,7 +8,6 @@ interface ErrorProps {
 }
 
 export default function Error({ error, reset }: ErrorProps) {
-    // Логирование ошибки (опционально)
     useEffect(() => {
         console.error("Произошла ошибка:", error);
     }, [error]);
