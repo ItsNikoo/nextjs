@@ -29,7 +29,6 @@ export default function RootLayout({children, modal}: { children: React.ReactNod
             {children}
             {modal}
         </main>
-        {/* Контент страниц будет здесь */}
         <footer className='flex justify-around py-3 bg-blue-200 font-bold font-serif '>
             <h1>Новостной портал РТУ МИРЭА</h1>
         </footer>
